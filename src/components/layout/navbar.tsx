@@ -54,10 +54,10 @@ interface Navbar1Props {
 
 const Navbar = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
+    url: "https://sani-mohibur.github.io/portfolio/",
     src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
     alt: "logo",
-    title: "Shadcnblocks.com",
+    title: "Mohibur Rahman",
   },
   menu = [
     { title: "Home", url: "/" },
