@@ -58,10 +58,13 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             {post.views}
           </span>
 
-          <span className="flex items-center gap-1">
+          <Link
+            href={`/blogs/${post.id}#comments`}
+            className="flex items-center gap-1 hover:text-primary"
+          >
             <MessageCircle className="h-4 w-4" />
             {post._count?.comments || 0}
-          </span>
+          </Link>
 
           {post.isFeatured && (
             <Badge

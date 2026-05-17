@@ -1,6 +1,7 @@
 //! This can be used only in client component
 // import { useParams } from "next/navigation";
 
+import CommentsSection from "@/components/modules/homepage/CommentsSection";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { blogService } from "@/services/blog.service";
@@ -87,6 +88,10 @@ export default async function BlogPage({
           )}
         </div>
       </footer>
+
+      <Separator className="my-8" />
+
+      <CommentsSection postId={id} comments={blog.comments || []} />
     </article>
   );
 }
