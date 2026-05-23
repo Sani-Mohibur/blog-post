@@ -11,8 +11,8 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { env } from "@/env";
+import { revalidateTag, updateTag } from "next/cache";
 import { cookies } from "next/headers";
-import { toast } from "sonner";
 
 const API_URL = env.API_URL;
 
@@ -43,6 +43,11 @@ export default function CreateBlogFormServer() {
       },
       body: JSON.stringify(blogData),
     });
+
+    if (res.ok) {
+      revalidateTag("blogPosts", "max");
+      // updateTag("blogPosts"); // use either one of them
+    }
   };
 
   return (
