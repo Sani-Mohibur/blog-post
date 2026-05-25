@@ -55,9 +55,9 @@ interface Navbar1Props {
 const Navbar = ({
   logo = {
     url: "https://sani-mohibur.github.io/portfolio/",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
+    src: "thought_space_logo.svg",
     alt: "logo",
-    title: "Mohibur Rahman",
+    title: "ThoughtSpace",
   },
   menu = [
     { title: "Home", url: "/" },
@@ -87,10 +87,10 @@ const Navbar = ({
         <nav className="hidden items-center justify-between lg:flex">
           <div className="flex items-center gap-6">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
+            <a href={logo.url} className="flex items-center">
               <img
                 src={logo.src}
-                className="max-h-8 dark:invert"
+                className="max-h-16 dark:invert"
                 alt={logo.alt}
               />
               <span className="text-lg font-semibold tracking-tighter">
