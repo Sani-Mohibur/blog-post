@@ -64,7 +64,10 @@ export default function FeaturedPostsSection({ featuredPosts }: Props) {
 
           {featuredPosts.length > visiblePosts && (
             <div className="flex justify-center mt-8">
-              <Button onClick={() => setVisiblePosts((p) => p + 4)}>
+              <Button
+                onClick={() => setVisiblePosts((p) => p + 4)}
+                className="cursor-pointer hover:shadow-lg transition-all duration-200"
+              >
                 Show More
               </Button>
             </div>
